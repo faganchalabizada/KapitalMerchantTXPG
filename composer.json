@@ -1,0 +1,17 @@
+{
+    "name": "faganchalabizada/kapital-merchant-txpg",
+    "description": "Kapital Merchant TXPG API",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Faganchalabizada\\KapitalMerchantTxpg\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "faganchalabizada",
+            "email": "feqan@celebizade.info"
+        }
+    ],
+    "require": {}
+}
