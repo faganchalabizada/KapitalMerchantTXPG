@@ -4,7 +4,7 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Faganchalabizada\\KapitalMerchantTxpg\\": "src/"
+            "FaganChalabizada\\KapitalMerchantTXPG\\": "src/"
         }
     },
     "authors": [
