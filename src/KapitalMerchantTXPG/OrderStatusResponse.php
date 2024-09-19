@@ -7,7 +7,7 @@ use FaganChalabizada\KapitalMerchantTXPG\Exception\OrderException;
 class OrderStatusResponse
 {
 
-    /**
+    /** 
      * @var int Order id
      */
     private int $id;
