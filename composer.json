@@ -13,7 +13,7 @@
             "name": "FaganChalabizada",
             "email": "feqan@celebizade.info"
         }
-    ], 
+    ],
     "require": {
         "php": ">=7.4",
         "ext-curl": "*",
