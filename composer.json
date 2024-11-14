@@ -1,6 +1,7 @@
 {
     "name": "faganchalabizada/kapital-merchant-txpg",
     "description": "Kapital Merchant TXPG API",
+    "version": "1.0.1",
     "type": "library",
     "autoload": {
         "psr-4": {
