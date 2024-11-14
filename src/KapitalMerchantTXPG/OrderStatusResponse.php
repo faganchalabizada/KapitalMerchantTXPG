@@ -54,7 +54,7 @@ class OrderStatusResponse
         $this->setId($orderResponseData['order']['id']);
         $this->setType($orderResponseData['order']['typeRid']);
         $this->setStatus($orderResponseData['order']['status']);
-        $this->setPrevStatus($orderResponseData['order']['prevStatus']);
+        $this->setPrevStatus($orderResponseData['order']['prevStatus'] ?? "");
         $this->setAmount($orderResponseData['order']['amount']);
         $this->setCurrency($orderResponseData['order']['currency']);
         $this->setCreateTime($orderResponseData['order']['createTime']);
