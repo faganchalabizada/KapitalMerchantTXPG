@@ -1,23 +1,24 @@
 {
-    "name": "faganchalabizada/kapital-merchant-txpg",
-    "description": "Kapital Merchant TXPG API",
-    "version": "1.0.4",
-    "type": "library",
-    "autoload": {
-        "psr-4": {
-            "FaganChalabizada\\": "src/"
-        }
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "FaganChalabizada",
-            "email": "feqan@celebizade.info"
-        }
-    ],
-    "require": {
-        "php": ">=7.4",
-        "ext-curl": "*",
-        "ext-json": "*"
+  "name": "faganchalabizada/kapital-merchant-txpg",
+  "description": "Kapital Merchant TXPG API",
+  "version": "1.0.4",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "FaganChalabizada\\": "src/"
     }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "FaganChalabizada",
+      "email": "feqan@celebizade.info"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "minimum-stability": "stable"
 }
