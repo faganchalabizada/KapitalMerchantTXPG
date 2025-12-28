@@ -158,13 +158,4 @@ class OrderResponse
         $this->secret = $secret;
     }
 
-    /**
-     * Full Payment Redirect url. Just redirect user to this URL for payment.
-     * @return string URL
-     */
-    public function getFullRedirectUrl(): string
-    {
-        return $this->getUrl() ."?id=" . $this->getId() . "&password=" . $this->getPassword();
-    }
-
 }

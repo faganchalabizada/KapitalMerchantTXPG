@@ -21,6 +21,19 @@ class Merchant
     protected const PROD_BASIC_URL = 'https://e-commerce.kapitalbank.az/api/';
 
 
+    /*
+     * Test - https://txpgtst.kapitalbank.az/flex?id=Sizin_id&password=Sizin_password
+     */
+    protected const TEST_PAYMENT_BASE_URL = 'https://txpgtst.kapitalbank.az/flex?';
+
+
+    /*
+     * Prod - https://e-commerce.kapitalbank.az/flex?id=Sizin_id&password=Sizin_password
+     */
+    protected const PROD_PAYMENT_BASE_URL = 'https://e-commerce.kapitalbank.az/flex?';
+
+
+    private string $paymentUrl;
     private string $basicUrl;
 
     /**
@@ -37,6 +50,7 @@ class Merchant
     public function __construct()
     {
         $this->basicUrl = self::TEST_BASIC_URL;
+        $this->paymentUrl = self::TEST_PAYMENT_BASE_URL;
     }
 
     /**
@@ -50,8 +64,10 @@ class Merchant
     {
         if ($test) {
             $this->basicUrl = self::TEST_BASIC_URL;
+            $this->paymentUrl = self::TEST_PAYMENT_BASE_URL;
         } else {
             $this->basicUrl = self::PROD_BASIC_URL;
+            $this->paymentUrl = self::PROD_PAYMENT_BASE_URL;
         }
 
         $this->username = $username;
@@ -73,14 +89,14 @@ class Merchant
      * @throws Exception\OrderException
      */
     public function createOrder(string $typeRid,
-                                float     $amount,
-                                string    $currency,
-                                string    $language,
-                                string    $redirectUrl,
-                                string    $description = "",
-                                array     $hppCofCapturePurposes = [],
-                                string    $aut = "",
-                                string    $srcTokenStoredId = ""): OrderResponse
+                                float  $amount,
+                                string $currency,
+                                string $language,
+                                string $redirectUrl,
+                                string $description = "",
+                                array  $hppCofCapturePurposes = [],
+                                string $aut = "",
+                                string $srcTokenStoredId = ""): OrderResponse
     {
 
 
@@ -136,6 +152,11 @@ class Merchant
 
         //convert the XML result into array
         return json_decode($output, true);
+    }
+
+    public function getPaymentUrl($id, $password): string
+    {
+        return $this->paymentUrl . 'id=' . $id . '&password=' . $password;
     }
 
 }
